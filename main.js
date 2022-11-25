@@ -1,6 +1,8 @@
+if (localStorage.getItem('theme'))
+            document.getElementById('radioo').style.backgroundColor = localStorage.getItem('theme');
 function change(ref) {
     console.log(ref)
-
+    localStorage.setItem('theme', ref)
     document.getElementById('radioo').style.backgroundColor = ref;
     if (ref === 'black') {
         document.getElementById('search').style.color = 'white'
